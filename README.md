@@ -8,6 +8,16 @@ AWS CloudTrail은 AWS 인프라에서 행해지는 모든 작업을 기록, 모�
 
 - 다른 AWS서비스들 연계: 알람 생성, 접근 / 사용 패턴 분석 및 Event-driven 작업 생성
 
+## Lab Overview
+
+1. CloudTrail 구성
+
+2. S3 Select, AWS Console, AWS CLI, AWS Athena를 이용해서 Trail 분석
+
+3. Cross-Account CloudTrail 구성
+
+4. 특정 API에 대한 Slack 알람 설정
+
 ## CloudTrail 생성
 
 1. AWS Management Console에서 좌측 상단에 있는 **[Services]** 를 선택하고 검색창에서 CloudTrail를 검색하거나 **[Management & Governance]** 밑에 있는 **[CloudTrail]** 를 선택
