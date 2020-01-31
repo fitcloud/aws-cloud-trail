@@ -197,4 +197,4 @@ AWS CLI를 [설치](https://docs.aws.amazon.com/cli/latest/userguide/install-cli
 
 4. **[Create trail]** &rightarrow; **Trail name** = <YOUR_INITIAL>-cloudtrail, **Create a new S3 bucekt** = No, **S3 Bucket** = 다른 계정에 생성한 Trail Bucket &rightarrow; **[Create]**
 
-## [Root 유저 로그인 알람 설정](https://github.com/youngwjung/aws-root-account-best-practice#root-%EC%9C%A0%EC%A0%80-%EB%A1%9C%EA%B7%B8%EC%9D%B8-slack-%EC%95%8C%EB%9E%8C-%EC%84%A4%EC%A0%95)
+## [Root 유저 로그인 알람 설정](https://github.com/fitcloud/aws-root-account-best-practice#root-%EC%9C%A0%EC%A0%80-%EB%A1%9C%EA%B7%B8%EC%9D%B8-slack-%EC%95%8C%EB%9E%8C-%EC%84%A4%EC%A0%95)
