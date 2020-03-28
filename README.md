@@ -131,11 +131,18 @@ AWS CLI를 [설치](https://docs.aws.amazon.com/cli/latest/userguide/install-cli
 
 ### AWS Athena
 
-1. CloudTrail Dashboard 에서 **[Event history]** 로 이동후 **Run advanced queries in Amazon Athena** &rightarrow; **Storage location** = Trail이 저장된 S3 Bucket 지정 &rightarrow; **[Create table]** &rightarrow; Athena table name을 메모하고  **[Go to Athena]**  
+1. CloudTrail Dashboard 에서 **[Event history]** 로 이동후 **Run advanced queries in Amazon Athena** &rightarrow; **Storage location** = Trail이 저장된 S3 Bucket 지정 &rightarrow; **[Create table]** &rightarrow; Athena table name을 메모하고  **[Go to Athena]**
 
-2. Athena Dashboard에서 위에서 생성된 Table 오른쪽 끝에 **⋮**를 클릭 하고 **[Preview table]** 를 통해서 데이터 미리보기
+2. 로그인된 계정에서 AWS Athena 사용이 처음이라면 아래와 같은 메세지창이 보여집니다. 
 
-3. Query
+    ![Athena](media/athena.png)
+
+    클릭후 Athena Query 결과가 저장될 S3 Bucket을 지정합니다.
+    ![Athena Query Location](media/athena-s3.png)
+
+3. Athena Dashboard에서 위에서 생성된 Table 오른쪽 끝에 **⋮**를 클릭 하고 **[Preview table]** 를 통해서 데이터 미리보기
+
+4. Query
 
     - 특정 IAM User 로그:
 
@@ -167,7 +174,7 @@ AWS CLI를 [설치](https://docs.aws.amazon.com/cli/latest/userguide/install-cli
 
 1. S3 Dashboard로 이동후 Trail이 저장되는 Bucket 클릭
 
-2. **[Permissions]** &rightarrow; **[Bucket Policy]** &rightarrow; 아래 Policy 블록을 Bucket policy editor에 붙여놓고 **<BUCKET_NAME>** 에 해당 S3 Bucket 이름, **<ACCOUNT_B_ID>** 에  **[Save]**\
+2. **[Permissions]** &rightarrow; **[Bucket Policy]** &rightarrow; 아래 Policy 블록을 Bucket policy editor에 붙여놓고 **<BUCKET_NAME>** 에 해당 S3 Bucket 이름, **<ACCOUNT_A_ID>** 에 해당 계정 ID, **<ACCOUNT_A_ID>** 에 다른 AWS 계정 ID를 입력 **[Save]**
 
     ```json
     {
@@ -193,9 +200,9 @@ AWS CLI를 [설치](https://docs.aws.amazon.com/cli/latest/userguide/install-cli
               "arn:aws:s3:::<BUCKET_NAME>/AWSLogs/<ACCOUNT_A_ID>/*",
               "arn:aws:s3:::<BUCKET_NAME>/AWSLogs/<ACCOUNT_B_ID>/*"
             ],
-            "Condition": { 
-              "StringEquals": { 
-              "s3:x-amz-acl": "bucket-owner-full-control" 
+            "Condition": {
+              "StringEquals": {
+              "s3:x-amz-acl": "bucket-owner-full-control"
               }
             }
           }
