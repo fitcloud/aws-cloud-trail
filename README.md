@@ -133,7 +133,7 @@ AWS CLI를 [설치](https://docs.aws.amazon.com/cli/latest/userguide/install-cli
 
 1. CloudTrail Dashboard 에서 **[Event history]** 로 이동후 **Run advanced queries in Amazon Athena** &rightarrow; **Storage location** = Trail이 저장된 S3 Bucket 지정 &rightarrow; **[Create table]** &rightarrow; Athena table name을 메모하고  **[Go to Athena]**
 
-2. 로그인된 계정에서 AWS Athena 사용이 처음이라면 아래와 같은 메세지창이 보여집니다. 
+2. 로그인된 계정에서 AWS Athena 사용이 처음이라면 아래와 같은 메세지창이 보여집니다.
 
     ![Athena](media/athena.png)
 
